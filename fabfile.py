@@ -2,13 +2,11 @@ from fabric.api import *
 import os
 import fabric.contrib.project as project 
 
-ROOT_PATH = os.path.abspath(os.path.dirname(__file__))
-DEPLOY_PATH = os.path.join(ROOT_PATH, 'myblog/diy/')
 
 print os.getcwd()
 
 def clean():
-    local('rm -rf ./deploy ./myblog')
+    local('rm -rf ./deploy')
 
 def generate():
     local('hyde -g -s .')
@@ -26,15 +24,10 @@ def reserve():
     regen()
     serve()
 
-   
-def smush():
-    local('smusher ./media/images')
-
-
 def openshift():
     
     os.chdir('../myblog')
-    local('git add -p && git commit')
+    local('git add . && git commit')
     local('git push')
 
  

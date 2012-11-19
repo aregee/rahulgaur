@@ -15,8 +15,8 @@ BACKUPS_DIR = os.path.join(ROOT_PATH, 'backups')
 BACKUP = False
 
 SITE_ROOT = "/"#os.path.join(ROOT_PATH, 'deploy')
-SITE_WWW_URL = 'http://iamaregee.com' #SITE_ROOT # http://john2x.com
-SITE_NAME = 'Aregee'
+SITE_WWW_URL = 'http://rahulgaur.info' #SITE_ROOT # http://john2x.com
+SITE_NAME = 'rahulgaur'
 SITE_AUTHOR = 'Rahul Gaur'
 
 #Url Configuration

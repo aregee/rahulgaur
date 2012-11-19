@@ -11,7 +11,7 @@
 {%endifnotequal%}
 
 <dl>
-    {% for list_page in node.pages %}
+    {% for list_page in node.pages reversed %}
 		{% ifnotequal list_page node.listing_page %}
 			{% if list_page.display_in_list %}
 				<dt>
