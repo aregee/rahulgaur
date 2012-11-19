@@ -1,0 +1,40 @@
+{% extends "skeleton/_body.html" %}
+
+{% block content_header %}
+
+<h1>{{ page.title}}</h1>
+{% if page.published %}
+<p class="centered"> Published on {{ page.published|date:"F d, Y" }} </p>
+{% endif %}
+{% if page.snippet %}
+<p class="centered"> {{ page.snippet }} </p>
+{% endif %}
+
+<div class="hr"><hr/></div>
+{% endblock %}
+
+{% block content_body %}
+
+<div id="post-content">
+	{% filter typogrify %}
+
+	{% markdown %}
+
+	{% block article %}
+	{% endblock %}
+		
+	{% endmarkdown %}
+
+	{% endfilter %}
+</div>
+<div class="hr"><hr/></div>
+
+{% endblock %}
+
+
+        
+<!--
+{% block context_nav %}
+{% include "skeleton/_context_nav.html" %}
+{% endblock %}
+-->

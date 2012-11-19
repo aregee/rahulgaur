@@ -1,0 +1,16 @@
+{% extends "_staticpage.html" %}
+
+{%hyde
+title: 500 - Internal Server Error
+created: 2010-12-31 03:33:14
+%}
+
+{% block content_body %}
+{% filter typogrify %}
+<h1>Internal Server Error</h1>
+<p class="centered">
+	Sorry. Click <a href="/">here</a> to go back to the front page.
+</p>
+<div class="hr"><hr/></div>
+{% endfilter %}
+{%endblock%}

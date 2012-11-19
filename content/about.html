@@ -1,0 +1,122 @@
+{% extends "_staticpage.html" %}
+
+{% hyde
+title: About
+
+%}
+{% block content_body %}  
+
+{% markdown %}
+About.Me
+========================
+{% endmarkdown %}
+
+<div class="hr"><hr/></div> 	
+	
+<div class="centered">
+	<div id="slides_two">
+		<div class="slides_container">
+			<div>
+			  	<img src="{{site.url}}/media/images/teaser.png"/>
+	
+			</div>
+			<div>
+			 <img src="{{site.url}}/media/images/me/me.JPG"/>
+			</div>
+			<div>
+			  <img src="{{site.url}}/media/images/me/dp.JPG"/>
+			</div>
+			<div>
+			  <img src="{{site.url}}/media/images/me/ye.jpg"/>
+			</div>
+			
+		</div>
+	</div>
+</div>
+
+<hr>
+
+<div class="hr"><hr/></div>
+{% markdown %}
+##Just Saying
+---------------
+
+I'm Rahul.I go to a **College** in  Meerut,UP to get a  Degree in Computer Science & Engineering Degree.To be honest,In College we don't really do much of engineering anyways.
+
+I have a g33k factor and I have been pretty much inclined to arts & computers.Just a thought of Compiling custom linux kernel striped down just to my needs & booting like Space Bound rocket ship is nerdgasmic for me.When I get bored,I did write a script in python to hide porno on my laptop and cellphones or make android app to say I Love you or anything totally unpredictable.
+I never know,what's the next thing I would be interested in.What I do know is , that I would totally give my best for it.
+
+<hr></hr>
+##Coding
+-----------
+
+I am passionate about Open Web,[Foss][],Cloud Computing , [Android][],[iOS][],Embedded linux,[Python][],JavaScript..!
+Currently [Python][] is what I use it to acomplish various problems which bug me from time to time.
+It's very elegantly designed.So , when I need to roll out a webapp then [Django][] does the job for me .
+**gcc compiler** & C are some leathal weapons , I have been trying my hands on it from time to time.Dabbling around here and there.
+Java , I don't really know what to say .They are teaching that in college and they have my minimum attention.
+I fiddle around with lots of codes written in perl,ruby,scala etc to get some work done or tweak it a bit to suit my need.Perl and ruby something I wan't to learn in distant future.
+
+[Foss]: http://foss.in
+[Python]: http://www.python.org
+[Django]: https://www.djangoproject.com/
+[Android]:https://www.android.com
+[iOS]: https://www.apple.com
+<hr></hr>
+##About the Site
+-------------------------
+
+This website was built using [Hyde][],written with [emacs][], inspired by [KISS][] and deployed on [OpenShift][].
+
+[KISS]: http://en.wikipedia.org/wiki/KISS_principle
+[Hyde]: http://ringce.com/hyde
+[emacs]: http://www.gnu.org
+[github]: https://github.com/aregee
+[OpenShift]: http://www.openshift.redhat.com
+
+
+{% endmarkdown %}
+
+<div class="hr"><hr/></div>
+<div style="text-align: center; font-size: 1.3em;">
+    <a href="http://twitter.com/iamaregee">Twitter</a>
+    &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+    <a href="https://plus.google.com/u/0/104843502219503331639">Google+</a>
+    &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+    <a href="http://github.com/aregee">Github</a>
+    &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+	<script src="{{site.url}}/media/js/slides.min.jquery.js"></script>
+<script>
+		$(function(){
+			$('#slides').slides({
+				generateNextPrev: true,
+				play: 2500
+			});
+			$('#slides_two').slides({
+				generateNextPrev: false,
+				play: 2500
+			});
+			$('#slides_three').slides({
+				generateNextPrev: true,
+				play: 6500,
+				autoHeight: true
+			});
+			
+			
+		});
+	</script>
+<div id="footer">
+	<center>
+		  {% markdown %}
+
+{% endmarkdown %}
+		  </center>
+</div>
+
+
+
+
+{% endblock %}

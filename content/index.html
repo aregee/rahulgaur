@@ -1,0 +1,136 @@
+{% extends "_staticpage.html" %}
+
+{%hyde
+title: Welcome
+created: 2010-12-31 03:33:14
+%}
+
+{% block content_body %}
+{% filter typogrify %}
+{% markdown %}
+#Now that's cooking up in my Brain !
+{% endmarkdown %}
+
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+	<script src="{{site.url}}/media/js/slides.min.jquery.js"></script>
+	<script>
+		$(function(){
+			$('#slides').slides({
+				preload: true,
+				preloadImage: 'media/images/loading.gif',
+				play: 5000,
+				pause: 2500,
+				hoverPause: true,
+				animationStart: function(current){
+					$('.caption').animate({
+						bottom:-35
+					},100);
+					if (window.console && console.log) {
+						// example return of current slide number
+						console.log('animationStart on slide: ', current);
+					};
+				},
+				animationComplete: function(current){
+					$('.caption').animate({
+						bottom:0
+					},200);
+					if (window.console && console.log) {
+						// example return of current slide number
+						console.log('animationComplete on slide: ', current);
+					};
+				},
+				slidesLoaded: function() {
+					$('.caption').animate({
+						bottom:0
+					},200);
+				}
+			});
+		});
+	</script>
+</head>
+<body>
+
+
+	<div id="container">
+		<div id="example">
+			<div id="slides">
+				<div class="slides_container">
+					<div class="slide">
+						<img src="{{site.url}}/media/images/teaser.png" width="570" height="270" alt="Slide 1"></a>
+						<div class="caption" style="bottom:0">
+							<p>Click here to read more !</p>
+						</div>
+					</div>
+					<div class="slide">
+						<img src="{{site.url}}/media/images/slide-2.jpg" width="570" height="270" alt="Slide 2"></a>
+						<div class="caption">
+							<p>Taxi</p>
+						</div>
+					</div>
+					<div class="slide">
+						<img src="{{site.url}}/media/images/slide-3.jpg" width="570" height="270" alt="Slide 3"></a>
+						<div class="caption">
+							<p>Happy raining Day</p>
+						</div>
+					</div>
+					<div class="slide">
+						<img src="{{site.url}}/media/images/slide-4.jpg" width="570" height="270" alt="Slide 4"></a>
+						<div class="caption">
+							<p>We Eat Light</p>
+						</div>
+					</div>
+					<div class="slide">
+						<img src="{{site.url}}/media/images/slide-5.jpg" width="570" height="270" alt="Slide 5"></a>
+						<div class="caption">
+							<p>&ldquo;I must go down to the sea again, to the lonely sea and the sky...&rdquo;</p>
+						</div>
+					</div>
+					<div class="slide">
+						<img src="{{site.url}}/media/images/slide-6.jpg" width="570" height="270" alt="Slide 6"></a>
+						<div class="caption">
+							<p>twelve.inch</p>
+						</div>
+					</div>
+					<div class="slide">
+						<img src="{{site.url}}/media/images/slide-7.jpg" width="570" height="270" alt="Slide 7"></a>
+						<div class="caption">
+							<p>Save my love for loneliness</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+	
+	</div>
+
+<p class="centered">Hi, I am Rahul (@aregee) .</p>
+<p class="centered">I'm a coder,blogger,student & beer lover.</p>
+<p class="centered">  50 miles short of being a Delhihite ! </p>
+<p class="centered">My College is in Meerut & that sucks! </p>
+<p class="centered">I can write poems and sketch that beautiful girl's portrait  ;)</p>
+
+
+{% endfilter %}
+<div class="hr"><hr/></div>
+	
+		<center>
+		  {% markdown %}
+###About this Website###
+
+This website was built using [Hyde][], inspired by [KISS][] and deployed on [OpenShift][].
+
+[KISS]: http://en.wikipedia.org/wiki/KISS_principle
+[Hyde]: http://ringce.com/hyde
+[emacs]: http://www.gnu.org
+[github]: https://github.com/aregee
+[OpenShift]: http://www.openshift.redhat.com
+
+{% endmarkdown %}
+		  </center>
+		
+{% endblock%}
+
+

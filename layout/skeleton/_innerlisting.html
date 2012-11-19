@@ -1,0 +1,44 @@
+{% extends "skeleton/_root.html" %}
+
+{% block all %}
+
+{%spaceless%}
+
+{%ifnotequal node page.node %}
+	{% if node.has_listing %}<a href="{{node.listing_url}}">{% endif %}
+	<h2>{{node.name|unslugify}}</h2>
+	{% if node.has_listing %}</a>{% endif %}
+{%endifnotequal%}
+
+<dl>
+    {% for list_page in node.pages %}
+		{% ifnotequal list_page node.listing_page %}
+			{% if list_page.display_in_list %}
+				<dt>
+
+					<a href="{{list_page.url}}">
+					{% with list_page.name_without_extension|remove_date_prefix|unslugify as default_title %}
+						{{list_page.title|default_if_none:default_title }}
+					{%endwith%}</a>
+					{%if list_page.published %}
+						<span style="font-style: italic;"> ({{list_page.published|date:"F d" }})  </span>
+					{% endif %}
+
+				</dt>
+				{% if list_page.snippet %}
+					<dd>
+					{{ list_page.snippet }}
+					</dd>
+				{%endif%}
+			{%endif%}
+		{% endifnotequal %}
+	{% endfor %}
+</dl>
+
+
+{%endspaceless%}
+{% if not forloop.last %}
+<div class="hr"><hr/></div>
+{% endif %}
+
+{% endblock %}

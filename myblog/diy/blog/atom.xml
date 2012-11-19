@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Aregee blog</title><link href="http://iamaregee.com/blog/atom.xml" rel="self"/><link href="http://iamaregee.com"/><updated>2012-11-19T16:03:29Z</updated><id>http://iamaregee.com</id><entry><title>My First Blog Post</title><author><name>Rahul Gaur</name></author><link href="http://iamaregee.com/blog/2012/second_post.html"/><updated>2000-01-01T00:00:00Z</updated><published>2012-11-16T06:48:01Z</published><id>http://iamaregee.com/blog/2012/second_post.html</id><content type="html">
+       
+
+&lt;!-- Hyde::Excerpt::Begin --&gt;
+
+&lt;h2 id=&quot;design&quot;&gt;Design&lt;/h2&gt;
+
+&lt;h1&gt;&lt;span class=&quot;caps&quot;&gt;HEADING&lt;/span&gt;&lt;/h1&gt;
+&lt;h3&gt;Hello World FIrst&amp;nbsp;Post&lt;/h3&gt;
+&lt;p&gt;Hi , So I have written a shell script to genrate and deploy this site on the openshift cloud and it&amp;#8217;s all done in a jiffy &amp;#8230;lets see if all this works&amp;nbsp;&amp;#8230;&lt;/p&gt;
+&lt;p&gt;Signing&amp;nbsp;off!&lt;/p&gt;
+&lt;h2&gt;Aregee&lt;/h2&gt;
+&lt;p&gt;&lt;!-- Hyde::Excerpt::End --&gt;
+
+   </content></entry></feed>

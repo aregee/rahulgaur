@@ -1,0 +1,28 @@
+{% extends "skeleton/_body.html"%}
+
+{% block content_header %}
+<h1>{{ page.title}}</h1>
+{% if page.snippet %}
+<p class="centered"> {{ page.snippet }} </p>
+{% endif %}
+
+<div class="hr"><hr/></div>
+{% endblock %}
+
+{% block content_body %}
+<!--<h1>{{node.name|unslugify}}</h1>-->
+<div class="page-listing">
+	{% for node in page.node.walk reversed%}
+		{% include "skeleton/_innerlisting.html" %}
+	{% empty %}
+		<p class="centered">There doesn't seem to be anything here. </p>
+	{% endfor %}
+</div>
+
+{% block extra %}
+{% endblock %}
+
+<div class="clear"></div>
+
+{% endblock %}
+
